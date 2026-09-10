@@ -202,6 +202,16 @@ a { color: var(--accent); }
 }
 
 /* =========================================================
+   ElevenLabs Conversational AI widget — match FitPulse brand
+   (see https://elevenlabs.io/docs/conversational-ai/customization/widget)
+   ========================================================= */
+elevenlabs-convai {
+  --el-convai-primary-color: #ff6b1a;
+  --el-convai-background-color: #1e1812;
+  --el-convai-text-color: #f5f1ea;
+}
+
+/* =========================================================
    Layout containers
    ========================================================= */
 main { max-width: var(--content-max); margin: 0 auto; padding: 0 20px; }
@@ -1449,5 +1459,14 @@ const TODAY_EXERCISES = EXERCISES_BY_AREA["full-body"];
 })();
 
   </script>
+
+  <!-- ElevenLabs Conversational AI — floating voice + text chat widget.
+       Replace YOUR_AGENT_ID with the ID from your ElevenLabs dashboard
+       (Conversational AI → your agent → Advanced tab → make the agent
+       "public" with authentication disabled, widgets require this).
+       Renders its own floating launcher icon automatically — no extra
+       markup or CSS needed. -->
+  <elevenlabs-convai agent-id="YOUR_AGENT_ID"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
